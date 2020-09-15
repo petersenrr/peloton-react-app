@@ -34,19 +34,8 @@ class ValidatedLoginForm extends React.Component {
         .then((response) => response.json())
         .then(result => {
             this.setState({ data: result });
-            console.log(this.state.data.session_id)
+            console.log(this.state.data)
         });
-        
-        // .then(function(response) {
-        //   return response.json()
-
-        // }).then(function(data){
-        //     stateData = data
-        //     console.log(data.session_id)
-            
-        // });
-        // this.setState({"data": stateData})
-        // console.log(this.state.data.session_id)
   
       event.preventDefault();
     }
@@ -67,61 +56,6 @@ class ValidatedLoginForm extends React.Component {
       );
     }
   }
-
-// const ValidatedLoginForm = () => (
-//     <Formik
-//         initialValues={{ email: "", password: "" }}
-//         onSubmit={ (values, { setSubmitting }) => {
-//             setTimeout(() => {
-//                 let temp = {
-//                     "username_or_email": values.email,
-//                     "password": values.password
-//                 }
-//                 postData("https://api.onepeloton.com/auth/login", temp).then((result) =>{
-//                     console.log(result);
-//                     setSubmitting(false);
-//                 })
-                
-//             }, 500);
-//         }}
-        
-//     >
-//         { props => {
-//             const {
-//                 values,
-//                 touched,
-//                 errors,
-//                 isSubmitting,
-//                 handleChange,
-//                 handleBlur,
-//                 handleSubmit
-//             } = props;
-//             return (
-//                 <form onSubmit={handleSubmit}>
-//                 <label htmlFor="email">Email</label>
-//                 <input 
-//                     name="email" 
-//                     type="text" 
-//                     placeholder="Enter your email"
-//                     values={values.email}
-//                     onChange={handleChange} 
-//                 />
-
-//                 <label htmlFor="email">Password</label>
-//                 <input
-//                     name="password"
-//                     type="password"
-//                     placeholder="Enter your password"
-//                     values={values.email}
-//                     onChange={handleChange} 
-//                 />
-//                 <button type="submit">Login</button>
-//                 </form>
-//             );
-//             }}
-//     </Formik>
-  
-// );
 
 
 export default ValidatedLoginForm;

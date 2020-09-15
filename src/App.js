@@ -7,6 +7,21 @@ import ValidatedLoginForm from './ValidatedLoginForm';
 
 
 function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+      <ValidatedLoginForm />
+        
+      </header>
+    </div>
+  );
+
+
+
+
+
+
+
   // const handleChangeEmail = (event) => {
         
   //   this.setState({"username_or_email": event.target.value});
@@ -36,14 +51,7 @@ function App() {
   
   //   event.preventDefault();
   // }
-  return (
-    <div className="App">
-      <header className="App-header">
-      <ValidatedLoginForm />
-        
-      </header>
-    </div>
-  );
+  
 
 
   // return (
